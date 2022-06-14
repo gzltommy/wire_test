@@ -1,3 +1,5 @@
+原文地址：https://zhuanlan.zhihu.com/p/338926709
+
 ### (1) Installing
 ```
 $ go install github.com/google/wire/cmd/wire@latest
