@@ -12,19 +12,19 @@ type Event struct {
 	Greeter Greeter
 }
 
-// NewMessage Message 的构造函数
+// NewMessage Message的构造函数
 func NewMessage(msg string) Message {
 	return Message{
 		msg: msg,
 	}
 }
 
-// NewGreeter Greeter 构造函数
+// NewGreeter Greeter构造函数
 func NewGreeter(m Message) Greeter {
 	return Greeter{Message: m}
 }
 
-// NewEvent Event 构造函数
+// NewEvent Event构造函数
 func NewEvent(g Greeter) Event {
 	return Event{Greeter: g}
 }
@@ -36,7 +36,7 @@ func (g Greeter) Greet() Message {
 	return g.Message
 }
 
-// 使用 wire 前
+//// 使用wire前
 //func main() {
 //	message := NewMessage("hello world")
 //	greeter := NewGreeter(message)
