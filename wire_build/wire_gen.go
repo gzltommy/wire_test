@@ -10,7 +10,7 @@ package wire_build
 
 func GetPostService() *PostService {
 	iPostRepo := NewPostRepo()
-	iPostUsecase := NewPostUsecase(iPostRepo)
-	postService := NewPostService(iPostUsecase)
+	iPostUseCase := NewPostUseCase(iPostRepo)
+	postService := NewPostService(iPostUseCase)
 	return postService
 }

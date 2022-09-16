@@ -10,27 +10,27 @@ func NewPostRepo() IPostRepo {
 	return new(IPostRepo)
 }
 
-// usecase
+// use case
 
-// IPostUsecase IPostUsecase
-type IPostUsecase interface{}
-type postUsecase struct {
+// IPostUseCase IPostUseCase
+type IPostUseCase interface{}
+type postUseCase struct {
 	repo IPostRepo
 }
 
-// NewPostUsecase NewPostUsecase
-func NewPostUsecase(repo IPostRepo) IPostUsecase {
-	return postUsecase{repo: repo}
+// NewPostUseCase
+func NewPostUseCase(repo IPostRepo) IPostUseCase {
+	return postUseCase{repo: repo}
 }
 
 // service
 
-// PostService PostService
+// PostService
 type PostService struct {
-	usecase IPostUsecase
+	useCase IPostUseCase
 }
 
-// NewPostService NewPostService
-func NewPostService(u IPostUsecase) *PostService {
-	return &PostService{usecase: u}
+// NewPostService
+func NewPostService(u IPostUseCase) *PostService {
+	return &PostService{useCase: u}
 }
